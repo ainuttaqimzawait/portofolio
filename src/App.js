@@ -9,19 +9,24 @@ import Project from './components/Project';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import About from './components/About';
+import { BrowserRouter } from 'react-router-dom';
+import Pages from './components/Pages';
 
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Bot />
-      <Hero />
-      <About />
-      <Skills />
-      <Project />
-      <Contact />
-      <Footer />
+      <Pages />
+      {/* <BrowserRouter>
+        <Navbar />
+        <Bot />
+        <Hero />
+        <About />
+        <Skills />
+        <Project />
+        <Contact />
+        <Footer />
+      </BrowserRouter> */}
 
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
