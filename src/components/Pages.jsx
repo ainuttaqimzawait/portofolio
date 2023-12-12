@@ -13,7 +13,7 @@ const Pages = () => {
         <div className="h-cov-h w-cov-w bg-blue-600 relative border-x-4 border-b-4 border-cyan-400">
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Pages1_2 />} />
+                    <Route path="/portofolio" element={<Pages1_2 />} />
                     {/* <Route path="/page2" element={} /> */}
                     <Route path="/pages3_4" element={<Pages3_4 />} />
                     <Route path="/pages5" element={<Pages5 />} />
