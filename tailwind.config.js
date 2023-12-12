@@ -11,6 +11,12 @@ module.exports = {
       },
       width: {
         'cov-w': '56rem'
+      },
+      skew: {
+        '180': '180deg',
+      },
+      transform: {
+        'transform-style': 'rotateY(150deg)',
       }
     },
   },

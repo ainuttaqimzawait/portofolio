@@ -2,13 +2,13 @@ import logo from './logo.svg';
 // import './App.css';
 import Navbar from './components/Navbar';
 import "./tailwind.css";
-import Hero from './components/Home';
+// import Hero from './components/Home';
 import Bot from './components/Bot';
 import Skills from './components/SkillsSection';
 import Project from './components/Project';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import About from './components/About';
+// import About from './components/About';
 import { BrowserRouter } from 'react-router-dom';
 import Pages from './components/Pages';
 

@@ -1,14 +1,14 @@
-import Poto from "../../assets/images/foto.jpg"
+import Poto from "../../assets/images/photo.png"
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 const Page1 = () => {
     const social_media = [
-        { link: "https://www.instagram.com/agungrifai10/", icon: <FaInstagram /> },
+        { link: "https://www.instagram.com/z4w_t/", icon: <FaInstagram /> },
         {
-            link: "https://web.facebook.com/rifaithebluessejati.rifaithebluessejati",
+            link: "https://www.facebook.com/profile.php?id=100081129099642&mibextid=nb1MFm3jZYALyyMy",
             icon: <FaFacebook />,
         },
-        { link: "https://www.linkedin.com/in/agung-rifai", icon: <FaLinkedin /> },
-        { link: "https://gitlab.com/agungfay10", icon: <FaGithub /> },
+        { link: "http://www.linkedin.com/in/ainuttaqim-zawait", icon: <FaLinkedin /> },
+        { link: "https://github.com/ainuttaqimzawait", icon: <FaGithub /> },
     ];
 
     return (
