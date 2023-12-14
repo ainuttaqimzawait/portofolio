@@ -8,24 +8,61 @@ html {
 }
 
 body {
-    @apply box-border bg-gray-900 text-gray-100 flex items-center justify-center min-h-screen font-Poppins; 
+    @apply box-border bg-gray-900 text-gray-400 flex items-center justify-center min-h-screen font-Poppins; 
   }
 
   @keyframes scaleIn {
     0% {
-      transform: scale(0);
+      transform: rotateY(0deg);
+    }
+    25% {
+      transform: rotateY(-40deg);
+    }
+    50% {
+      transform: rotateY(-90deg);
+    }
+    75% {
+      transform: rotateY(-140deg);
     }
     100% {
-      transition: transform 1s cubic-bezier(.645, .045, .355, 1);
+      transform: rotateY(-180deg);
     }
   }
   
-  .animate-slide-right {
+  .animate-slide-left {
     /* Atur transform awal (posisi awal sebelum animasi) */
     transform: scale(0);
-    transform-origin: right;
-    transform: rotateY(180deg);
+    transform-origin: left;
+    /* transform: rotateY(180deg); */
   
     /* Animasi keyframes saat halaman web pertama kali dibuka */
-    animation: scaleIn 0.5s ease-in-out;
+    animation: scaleIn 2s ease-in-out reverse;
+  }
+  .animate-slide-right {
+    /* transform: scale(0); */
+    transform-origin: left;
+    transform-style:preserve-3d;
+    /* transform: rotateY(-180deg); */
+  
+    /* animation: scaleIn 2s ease-in-out reverse; */
+  }
+
+  .page-right {
+    position: absolute;
+    width: 50%;
+    right: 0;
+    transform-origin: left;
+    transform-style:preserve-3d;
+    transition: transform 1s cubic-bezier(.645, .045, .355, 1);
+  }
+  .page-right .page-front {
+    transform: rotateY(0deg) translateZ(1px);
+  }
+  .page-back {
+    transform: rotateY(180deg) translateZ(1px);
+    /* background-color: linier-gradient(90deg, #fff, #dcdcdc) */
+  }
+
+  .turn {
+    transform: rotateY(-180deg);
   }

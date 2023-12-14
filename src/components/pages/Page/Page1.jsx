@@ -1,4 +1,4 @@
-import Poto from "../../assets/images/photo.png"
+import Poto from "../../../assets/images/photo.png"
 import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 const Page1 = () => {
     const social_media = [
@@ -12,7 +12,7 @@ const Page1 = () => {
     ];
 
     return (
-        <div className="absolute h-full w-1/2 bg-gradient-to-r from-gray-100 to-gray-300 to-5% origin-right flex flex-col justify-center">
+        <div className="absolute h-full w-1/2 bg-gradient-to-r from-gray-100 from-80% to-gray-300 origin-right flex flex-col justify-center">
             <img src={Poto} alt="" className="h-60 w-60 mx-auto mb-4 rounded-full" />
             <h1 className="md:text-3xl text-2xl md:leading-normal leading-10 text-black font-bold mx-auto">
                 Ainuttaqim Zawait

@@ -1,26 +1,25 @@
-import project1 from "../../assets/images/warung.jpg";
-import project2 from "../../assets/images/karyawan.jpg";
-import project3 from "../../assets/images/berita.png";
-import project4 from "../../assets/images/mini.png";
-import { FaAngleRight, FaReact } from "react-icons/fa";
+// import project1 from "../../../assets/images/warung.jpg";
+// import project2 from "../../assets/images/karyawan.jpg";
+import project3 from "../../../assets/images/berita.png";
+// import project4 from "../../assets/images/mini.png";
+import { FaAngleLeft, FaAngleRight, FaReact } from "react-icons/fa";
 import { SiBootstrap, SiExpress, SiHtml5, SiMongodb } from "react-icons/si";
-import { useNavigate } from "react-router-dom";
 
-const Page4 = () => {
+const Page5 = ({ sendDataToParent }) => {
     const projects = [
-        {
-            img: project1,
-            name: "Warung Karepe",
-            description:
-                " E-Commerce for food ordering with Midtrans payment gateway",
-            tools: [
-                { name: "React Js", icon: <FaReact /> },
-                { name: "Bootstrap", icon: <SiBootstrap /> },
-                { name: "Express Js", icon: <SiExpress /> },
-                { name: "MongoDB", icon: <SiMongodb /> },
-            ],
-            github_link: "https://gitlab.com/agungfay10/eduwork-server",
-        },
+        // {
+        //     img: project1,
+        //     name: "HijjabStore",
+        //     description:
+        //         " E-Commerce for food ordering with Midtrans payment gateway",
+        //     tools: [
+        //         { name: "React Js", icon: <FaReact /> },
+        //         { name: "Bootstrap", icon: <SiBootstrap /> },
+        //         { name: "Express Js", icon: <SiExpress /> },
+        //         { name: "MongoDB", icon: <SiMongodb /> },
+        //     ],
+        //     github_link: "https://gitlab.com/agungfay10/eduwork-server",
+        // },
         // {
         //     img: project2,
         //     name: "Employee Management System",
@@ -32,16 +31,16 @@ const Page4 = () => {
         //     ],
         //     github_link: "https://gitlab.com/agungfay10/employee-management-system",
         // },
-        // {
-        //     img: project3,
-        //     name: "News App",
-        //     description: "A system that displays news updates from the NEWS API",
-        //     tools: [
-        //         { name: "React Js", icon: <FaReact /> },
-        //         { name: "Bootstrap", icon: <SiBootstrap /> },
-        //     ],
-        //     github_link: "https://gitlab.com/agungfay10/portal-berita-react-js-hook",
-        // },
+        {
+            img: project3,
+            name: "News App",
+            description: "A system that displays news updates from the NEWS API",
+            tools: [
+                { name: "React Js", icon: <FaReact /> },
+                { name: "Bootstrap", icon: <SiBootstrap /> },
+            ],
+            github_link: "https://gitlab.com/agungfay10/portal-berita-react-js-hook",
+        },
         // {
         //     img: project4,
         //     name: "Mini E-Commerce",
@@ -54,9 +53,9 @@ const Page4 = () => {
         //         "https://gitlab.com/agungfay10/im-sanbercode-laravel-web-dev/-/tree/main/3.%20Bootstrap?ref_type=heads",
         // },
     ];
-    const navigate = useNavigate();
+
     return (
-        <div className="absolute h-full w-1/2 right-0 flex flex-col justify-center items-center px-3 bg-gradient-to-r from-gray-100 to-gray-300 to-5%">
+        <div className="absolute left-0 h-full w-full flex flex-col justify-center items-center px-3 bg-gradient-to-r from-gray-100 from-80% to-gray-300 page-back">
             <div className="text-center mt-7">
                 <h3 className="text-4xl font-semibold">
                     My <span className="text-cyan-600">Projects</span>
@@ -100,12 +99,12 @@ const Page4 = () => {
                     ))}
                 </div>
             </div>
-            <button className="absolute right-2 bg-cyan-500 hover:cursor-pointer bottom-3" onClick={_ => navigate('/pages5')}>
-                <FaAngleRight />
+            <button className="absolute left-2 text-gray-400 hover:cursor-pointer bottom-3" onClick={() => sendDataToParent('z-10')}>
+                <FaAngleLeft />
             </button>
-            <div className="text-gray-400 absolute bottom-3">3</div>
+            <div className="text-gray-400 absolute bottom-3">4</div>
         </div>
     )
 }
 
-export default Page4;
+export default Page5;

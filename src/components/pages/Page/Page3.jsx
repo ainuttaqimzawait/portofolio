@@ -1,20 +1,19 @@
 import { FaAngleLeft } from "react-icons/fa";
-import mongoLogo from "../../assets/images/mongo.png";
-import expressLogo from "../../assets/images/express.png";
-import reactLogo from "../../assets/images/react.png";
-import nodeLogo from "../../assets/images/node.png";
-import htmlLogo from "../../assets/images/html.png";
-import cssLogo from "../../assets/images/css.png";
-import bootstrapLogo from "../../assets/images/bootstrap.png";
-import tailwindLogo from "../../assets/images/tailwind.png";
-import jsLogo from "../../assets/images/js.png";
-import mysqlLogo from "../../assets/images/mysql.png";
-import gitLogo from "../../assets/images/git.png";
-import apiLogo from "../../assets/images/api.png";
-import { useNavigate } from "react-router-dom";
+import mongoLogo from "../../../assets/images/mongo.png";
+import expressLogo from "../../../assets/images/express.png";
+import reactLogo from "../../../assets/images/react.png";
+import nodeLogo from "../../../assets/images/node.png";
+import htmlLogo from "../../../assets/images/html.png";
+import cssLogo from "../../../assets/images/css.png";
+import bootstrapLogo from "../../../assets/images/bootstrap.png";
+import tailwindLogo from "../../../assets/images/tailwind.png";
+import jsLogo from "../../../assets/images/js.png";
+import mysqlLogo from "../../../assets/images/mysql.png";
+import gitLogo from "../../../assets/images/git.png";
+import apiLogo from "../../../assets/images/api.png";
 
 
-const Page3 = () => {
+const Page3 = ({ sendDataToParent }) => {
     const skillsData = [
         { name: "MongoDB", image: mongoLogo },
         { name: "ExpressJS", image: expressLogo },
@@ -29,9 +28,9 @@ const Page3 = () => {
         { name: "Git", image: gitLogo },
         { name: "Rest Api", image: apiLogo },
     ];
-    const navigate = useNavigate();
+
     return (
-        <div className="absolute h-full w-1/2 flex flex-col justify-center items-center px-3 bg-gradient-to-r from-gray-100 to-gray-300 to-5%">
+        <div className="absolute h-full w-full flex flex-col justify-center items-center px-3 bg-gradient-to-r from-gray-100 from-80% to-gray-300 page-back">
             <h3 className="mb-8 text-4xl font-semibold">
                 My <span className="text-cyan-600">Skills</span>
             </h3>
@@ -43,7 +42,7 @@ const Page3 = () => {
                     </div>
                 ))}
             </div>
-            <button className="absolute left-2 bg-cyan-500 hover:cursor-pointer bottom-3" onClick={_ => navigate('/')}>
+            <button className="absolute left-2 text-gray-400 hover:cursor-pointer bottom-3" onClick={() => sendDataToParent('z-20')}>
                 <FaAngleLeft />
             </button>
             <div className="text-gray-400 absolute bottom-3">2</div>
