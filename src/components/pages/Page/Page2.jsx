@@ -10,7 +10,7 @@ const Page2 = ({ sendDataToParent }) => {
             <p className="text-justify leading-7 w-11/12 mx-auto text-gray-600">
                 I have an interest in Frontend and Backend web development, through studying at Eduwork's MERN Bootcamp. I also have the ability to develop web applications and teamwork and have several portfolios. Eager to pursue a career in frontend and backend web development and contribute to creating the best technology solutions.
             </p>
-            <a href="https://docs.google.com/document/d/1hajeBQzUdkyRneX-HCD2NjA-M7NroYp4J4ywofxmKl8/edit">
+            <a href="https://docs.google.com/document/d/1hajeBQzUdkyRneX-HCD2NjA-M7NroYp4J4ywofxmKl8/edit" className="mt-10">
                 <button className="bg-cyan-600 text-white px-4 py-2 rounded-full shadow-md hover:bg-cyan-500">
                     Download CV
                 </button>

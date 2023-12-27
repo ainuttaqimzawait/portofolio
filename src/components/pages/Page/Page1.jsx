@@ -12,7 +12,7 @@ const Page1 = () => {
     ];
 
     return (
-        <div className="absolute h-full w-1/2 bg-gradient-to-r from-gray-100 from-80% to-gray-300 origin-right flex flex-col justify-center">
+        <div className="absolute h-box-h w-full flex flex-col justify-center items-center px-3 bg-gradient-to-r from-gray-100 from-80% to-gray-300 rounded border-l-8 border-b-8 border-t-4 border-cyan-600 page-back">
             <img src={Poto} alt="" className="h-60 w-60 mx-auto mb-4 rounded-full" />
             <h1 className="md:text-3xl text-2xl md:leading-normal leading-10 text-black font-bold mx-auto">
                 Ainuttaqim Zawait

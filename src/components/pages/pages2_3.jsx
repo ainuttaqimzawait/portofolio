@@ -8,7 +8,6 @@ const Pages2_3 = () => {
         <div className={`h-full w-1/2 page-right ${className}`}>
             <Page2 sendDataToParent={(data) => setClassname(data)} />
             <Page3 sendDataToParent={(data) => setClassname(data)} />
-            {console.log(className)}
         </div>
     )
 }

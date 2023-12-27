@@ -11,7 +11,7 @@ const Page6 = () => {
         },
     ];
     return (
-        <div className="absolute h-full w-1/2 right-0 flex flex-col justify-center items-center px-3 bg-gradient-to-r from-gray-100 from-80% to-gray-300">
+        <div className="absolute h-box-h w-1/2 right-0 flex flex-col justify-center items-center -top-1 px-3 bg-gradient-to-r from-gray-100 from-80% to-gray-300 rounded border-r-8 border-b-8 border-t-4 border-cyan-600">
             <div className="text-center">
                 <h3 className="text-4xl font-semibold">
                     Contact <span className="text-cyan-600">Me</span>

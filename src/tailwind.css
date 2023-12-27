@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    @apply box-border bg-gray-900 text-gray-400 flex items-center justify-center min-h-screen font-Poppins; 
+    @apply box-border bg-gray-900 text-gray-700 flex items-center justify-center min-h-screen font-Poppins; 
   }
 
   @keyframes scaleIn {

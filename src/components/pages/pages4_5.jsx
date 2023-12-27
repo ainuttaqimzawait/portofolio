@@ -7,7 +7,7 @@ const Pages4_5 = () => {
     return (
         <div className={`h-full w-1/2 page-right ${className}`}>
             <Page4 sendDataToParent={(data) => setClassname(data)} />
-            <Page5 sendDataToParent={(data) => setClassname(data)} />
+            <Page5 sendDataToParent={(data) => { setClassname(data); setTimeout(() => setClassname('z-10'), 1000) }} />
         </div>
     )
 }

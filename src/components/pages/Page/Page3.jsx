@@ -34,11 +34,11 @@ const Page3 = ({ sendDataToParent }) => {
             <h3 className="mb-8 text-4xl font-semibold">
                 My <span className="text-cyan-600">Skills</span>
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 m-6">
                 {skillsData.map((skill, index) => (
-                    <div className="text-white p-4 rounded-lg shadow-md mb-4 mt-4 flex items-center">
+                    <div className="text-stone-800 p-2 rounded-lg shadow-md my-2 flex flex-col items-center">
                         <img src={skill.image} alt={`${skill.name} logo`} className="w-8 h-8" />
-                        {/* <div>{skill.name}</div> */}
+                        <div className="text-sm">{skill.name}</div>
                     </div>
                 ))}
             </div>
