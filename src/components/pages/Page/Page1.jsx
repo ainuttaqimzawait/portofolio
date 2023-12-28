@@ -20,7 +20,7 @@ const Page1 = () => {
             <h5 className="md:text-2xl text-lg md:leading-normal leading-5 mt-4 font-bold text-gray-600 mx-auto">
                 Fullstack Web Developer
             </h5>
-            <a href="#contact" className="mx-auto">
+            <a href="https://wa.me/+6285158256355" className="mx-auto">
                 <button className="bg-cyan-600 text-white px-4 py-2 rounded-full shadow-md hover:bg-cyan-500 mt-8">
                     Contact Me
                 </button>

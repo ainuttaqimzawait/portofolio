@@ -1,4 +1,5 @@
-import project1 from "../../../assets/images/hijabshop.jpg";
+import project1 from "../../../assets/images/Screenshot_39.jpg";
+import project1_a from "../../../assets/images/hijabshop.jpg";
 import { FaAngleRight, FaReact } from "react-icons/fa";
 import { SiBootstrap, SiExpress, SiHtml5, SiMongodb } from "react-icons/si";
 
@@ -17,9 +18,10 @@ const Page4 = ({ sendDataToParent }) => {
                     Hijabs <span className="text-cyan-600">Store</span>
                 </h3>
             </div>
-            <div className="w-full px-6">
+            <div className="w-full px-6 mt-4">
                 <img src={project1} alt="" className="rounded-lg border border-gray-400" />
-                <p className="text-sm text-left my-3">
+                <img src={project1_a} alt="" className="absolute w-52 -mt-20 ml-44 rounded-sm border border-gray-400" />
+                <p className="text-sm text-left my-3 mt-5">
                     E-Commerce to display hijabs for sale
                 </p>
                 <div className="text-sm text-left my-3">
