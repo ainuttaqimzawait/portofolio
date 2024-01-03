@@ -1,13 +1,13 @@
-import { useState } from "react";
 import Page4 from "./Page/Page4";
 import Page5 from "./Page/Page5"
+import { useSelector } from "react-redux";
 
 const Pages4_5 = () => {
-    const [className, setClassname] = useState('z-10');
+    let { data } = useSelector(state => state.setStyle)
     return (
-        <div className={`h-full w-1/2 page-right ${className}`}>
-            <Page4 sendDataToParent={(data) => setClassname(data)} />
-            <Page5 sendDataToParent={(data) => { setClassname(data); setTimeout(() => setClassname('z-10'), 1000) }} />
+        <div className={`h-full w-1/2 page-right ${data[1]}`}>
+            <Page4 />
+            <Page5 />
         </div>
     )
 }

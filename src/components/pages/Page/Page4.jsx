@@ -1,9 +1,13 @@
 import project1 from "../../../assets/images/Screenshot_39.jpg";
 import project1_a from "../../../assets/images/hijabshop.jpg";
 import { FaAngleRight, FaReact } from "react-icons/fa";
-import { SiBootstrap, SiExpress, SiHtml5, SiMongodb } from "react-icons/si";
+import { SiBootstrap, SiExpress, SiMongodb } from "react-icons/si";
+// import Whatsapp from "./contact";
+import { nextPage } from "../../../App/feature/pagination/action";
+import { useDispatch } from "react-redux";
 
-const Page4 = ({ sendDataToParent }) => {
+const Page4 = () => {
+    const dispatch = useDispatch()
     const tools = [
         { name: "React Js", icon: <FaReact /> },
         { name: "Bootstrap", icon: <SiBootstrap /> },
@@ -13,6 +17,7 @@ const Page4 = ({ sendDataToParent }) => {
 
     return (
         <div className="absolute h-full w-full flex flex-col justify-center items-center px-3 bg-gradient-to-r from-gray-100 from-80% to-gray-300 page-front">
+            {/* <Whatsapp /> */}
             <div className="text-center mt-7">
                 <h3 className="text-4xl font-semibold mb-6">
                     Hijabs <span className="text-cyan-600">Store</span>
@@ -46,7 +51,7 @@ const Page4 = ({ sendDataToParent }) => {
                 </div>
             </div>
 
-            <button className="absolute right-2 text-gray-400 hover:cursor-pointer bottom-3" onClick={() => sendDataToParent('turn z-30')}>
+            <button className="absolute right-2 text-gray-400 hover:cursor-pointer bottom-3" onClick={() => { dispatch(nextPage(1)) }}>
                 <FaAngleRight />
             </button>
             <div className="text-gray-400 absolute bottom-3">3</div>

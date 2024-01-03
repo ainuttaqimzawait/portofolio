@@ -1,8 +1,11 @@
 import project3 from "../../../assets/images/berita.png";
-import { FaAngleLeft, FaAngleRight, FaReact } from "react-icons/fa";
-import { SiBootstrap, SiExpress, SiHtml5, SiMongodb } from "react-icons/si";
+import { FaAngleLeft, FaReact } from "react-icons/fa";
+import { SiBootstrap } from "react-icons/si";
+import { backPage } from "../../../App/feature/pagination/action";
+import { useDispatch } from "react-redux";
 
-const Page5 = ({ sendDataToParent }) => {
+const Page5 = () => {
+    const dispatch = useDispatch();
     const projects = [
         {
             img: project3,
@@ -41,7 +44,6 @@ const Page5 = ({ sendDataToParent }) => {
                                     {project_info.tools.map((tool, index) => (
                                         <div key={index} className="flex items-center mr-4">
                                             {tool.icon}
-                                            {/* <span className="ml-2">{tool.name}</span> */}
                                         </div>
                                     ))}
                                 </div>
@@ -49,7 +51,6 @@ const Page5 = ({ sendDataToParent }) => {
                             <div className="flex gap-3">
                                 <a
                                     href={project_info.github_link}
-                                    // target="_blank"
                                     className="text-white bg-cyan-600 hover:bg-cyan-700 px-4 py-2 rounded-lg transition-colors duration-300 ease-in-out flex items-center justify-center text-sm sm:text-base"
                                 >
                                     Source Code
@@ -59,7 +60,7 @@ const Page5 = ({ sendDataToParent }) => {
                     ))}
                 </div>
             </div>
-            <button className="absolute left-2 text-gray-400 hover:cursor-pointer bottom-3" onClick={() => sendDataToParent('z-30')}>
+            <button className="absolute left-2 text-gray-400 hover:cursor-pointer bottom-3" onClick={() => { dispatch(backPage(1)) }}>
                 <FaAngleLeft />
             </button>
             <div className="text-gray-400 absolute bottom-3">4</div>

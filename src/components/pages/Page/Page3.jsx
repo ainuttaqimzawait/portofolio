@@ -11,9 +11,12 @@ import jsLogo from "../../../assets/images/js.png";
 import mysqlLogo from "../../../assets/images/mysql.png";
 import gitLogo from "../../../assets/images/git.png";
 import apiLogo from "../../../assets/images/api.png";
+import { backPage } from "../../../App/feature/pagination/action";
+import { useDispatch } from "react-redux";
 
 
-const Page3 = ({ sendDataToParent }) => {
+const Page3 = () => {
+    const dispatch = useDispatch();
     const skillsData = [
         { name: "MongoDB", image: mongoLogo },
         { name: "ExpressJS", image: expressLogo },
@@ -42,7 +45,7 @@ const Page3 = ({ sendDataToParent }) => {
                     </div>
                 ))}
             </div>
-            <button className="absolute left-2 text-gray-400 hover:cursor-pointer bottom-3" onClick={() => sendDataToParent('z-20')}>
+            <button className="absolute left-2 text-gray-400 hover:cursor-pointer bottom-3" onClick={() => { dispatch(backPage(0)) }}>
                 <FaAngleLeft />
             </button>
             <div className="text-gray-400 absolute bottom-3">2</div>

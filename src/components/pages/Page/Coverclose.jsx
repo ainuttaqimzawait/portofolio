@@ -1,10 +1,7 @@
-import { FaAngleRight, FaLocationArrow, FaWhatsapp } from "react-icons/fa";
+import { FaLocationArrow, FaWhatsapp } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import { nextPage } from "../../../App/feature/pagination/action";
-import { useDispatch } from "react-redux";
 
-const Page6 = () => {
-    const dispatch = useDispatch();
+const Coverclose = () => {
     const contact_info = [
         {
             logo: <SiGmail />,
@@ -23,8 +20,8 @@ const Page6 = () => {
         },
     ];
     return (
-        <div className="absolute h-full w-full right-0 flex flex-col justify-center items-center px-3 bg-gradient-to-r from-gray-100 from-80% to-gray-300 page-front">
-            <div className="text-center">
+        <div className="absolute h-box-h w-1/2 right-0 flex flex-col justify-center items-center -top-1 px-3 z-1 bg-cyan-600 rounded border-r-8 border-b-8 border-t-4 border-cyan-600">
+            {/* <div className="text-center">
                 <h3 className="text-4xl font-semibold">
                     Contact <span className="text-cyan-600">Me</span>
                 </h3>
@@ -50,12 +47,9 @@ const Page6 = () => {
                     </div>
                 </div>
             </div>
-            <button className="absolute right-2 text-gray-400 hover:cursor-pointer bottom-3" onClick={() => { dispatch(nextPage(2)) }}>
-                <FaAngleRight />
-            </button>
-            <div className="text-gray-400 absolute bottom-3">5</div>
+            <div className="text-gray-400 absolute bottom-3">5</div> */}
         </div>
     )
 }
 
-export default Page6;
+export default Coverclose;
