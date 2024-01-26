@@ -1,9 +1,19 @@
 import { useDispatch } from "react-redux";
-import { endPage } from "../../../App/feature/pagination/action";
+import { endPage, nextPage } from "../../../App/feature/pagination/action";
 import Poto from "../../../assets/images/photo.png"
-import { FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaAngleRight, FaFacebook, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { useEffect, useState } from "react";
 const Page1 = () => {
     const dispatch = useDispatch();
+    const [paper, setPaper] = useState("");
+    useEffect(() => {
+        const mediaQuery = window.matchMedia("(max-width: 767px)");
+        if (mediaQuery.matches) {
+            setPaper("page-front")
+        } else {
+            setPaper("border-l-8 border-b-8 border-t-4 border-cyan-600 page-back")
+        }
+    })
     const social_media = [
         { link: "https://www.instagram.com/z4w_t/", icon: <FaInstagram /> },
         {
@@ -15,8 +25,8 @@ const Page1 = () => {
     ];
 
     return (
-        <div className="absolute h-box-h w-full flex flex-col justify-center items-center px-3 bg-gradient-to-r from-gray-100 from-80% to-gray-300 rounded border-l-8 border-b-8 border-t-4 border-cyan-600 page-back">
-            <img src={Poto} alt="" className="h-60 w-60 mx-auto mb-4 rounded-full" />
+        <div className={`absolute h-box-h w-full outline-8 flex flex-col justify-center items-center px-3 bg-gradient-to-r from-gray-100 from-80% to-gray-300 rounded ${paper}`}>
+            <img src={Poto} alt="" className="w-1/2 mx-auto mb-4 rounded-full" />
             <h1 className="md:text-3xl text-2xl md:leading-normal leading-10 text-black font-bold mx-auto">
                 Ainuttaqim Zawait
             </h1>
@@ -24,9 +34,8 @@ const Page1 = () => {
                 Fullstack Web Developer
             </h5>
             <a
-                // href="https://wa.me/+6285158256355"
                 className="mx-auto">
-                <button className="bg-cyan-600 text-white px-4 py-2 rounded-full shadow-md hover:bg-cyan-500 mt-8" onClick={() => dispatch(endPage(2))}>
+                <button className="bg-cyan-600 text-white px-4 py-2 rounded-full shadow-md hover:bg-cyan-500 mt-8" onClick={() => dispatch(endPage(7))}>
                     Contact Me
                 </button>
             </a>
@@ -43,6 +52,12 @@ const Page1 = () => {
                     </div>
                 ))}
             </div>
+            <button className="md:hidden absolute text-gray-400 right-2 hover:cursor-pointer bottom-3"
+                onClick={() => { dispatch(nextPage(1)) }}
+            >
+                <FaAngleRight />
+            </button>
+            <div className="text-gray-400 absolute bottom-3">1</div>
         </div>
     )
 }

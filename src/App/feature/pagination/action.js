@@ -1,9 +1,23 @@
-import { BACK, BACKINTERVAL, ENDPAGE, NEXT } from "./constant"
+import { BACK, BACKINTERVAL, ENDPAGE, NEXT, NEXTINTERVAL } from "./constant"
 
-export const nextPage = (value) => {
+export const nextPageInterval = (value) => {
+    return {
+        type: NEXTINTERVAL,
+        value: value
+    }
+};
+
+export const next = (value) => {
     return {
         type: NEXT,
         value: value
+    }
+};
+
+export const nextPage = (value) => {
+    return async (dispatch, getState) => {
+        dispatch(nextPageInterval(value));
+        await setTimeout(() => dispatch(next(value)), 500)
     }
 };
 
@@ -24,16 +38,16 @@ export const back = (value) => {
 export const backPage = (value) => {
     return async (dispatch, getState) => {
         dispatch(backPageInterval(value));
-        await setTimeout(() => dispatch(back(value)), 1000)
+        await setTimeout(() => dispatch(back(value)), 500)
     }
 };
 
 export const endPage = (value) => {
     return async (dispatch, getState) => {
-        for (let index = 0; index < value; index++) {
+        for (let index = 1; index < value; index++) {
             await setTimeout(() => {
-                dispatch(nextPage(index));
-                // setTimeout(() => dispatch(back(index)), 1000)
+                dispatch(nextPageInterval(index));
+                setTimeout(() => dispatch(next(index)), 300)
             }, (index + 1) * 200 + 100)
         }
     }
@@ -41,7 +55,7 @@ export const endPage = (value) => {
 
 export const backHome = (value) => {
     return async (dispatch, getState) => {
-        for (let index = 2; index > value; index--) {
+        for (let index = 6; index > value; index--) {
             await setTimeout(() => {
                 dispatch(backPageInterval(index));
                 setTimeout(() => dispatch(back(index)), 300)

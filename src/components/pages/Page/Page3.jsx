@@ -1,4 +1,4 @@
-import { FaAngleLeft } from "react-icons/fa";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import mongoLogo from "../../../assets/images/mongo.png";
 import expressLogo from "../../../assets/images/express.png";
 import reactLogo from "../../../assets/images/react.png";
@@ -11,12 +11,22 @@ import jsLogo from "../../../assets/images/js.png";
 import mysqlLogo from "../../../assets/images/mysql.png";
 import gitLogo from "../../../assets/images/git.png";
 import apiLogo from "../../../assets/images/api.png";
-import { backPage } from "../../../App/feature/pagination/action";
+import { backPage, nextPage } from "../../../App/feature/pagination/action";
 import { useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
 
 
 const Page3 = () => {
     const dispatch = useDispatch();
+    const [paper, setPaper] = useState("");
+    useEffect(() => {
+        const mediaQuery = window.matchMedia("(max-width: 767px)");
+        if (mediaQuery.matches) {
+            setPaper("page-front")
+        } else {
+            setPaper("page-back")
+        }
+    })
     const skillsData = [
         { name: "MongoDB", image: mongoLogo },
         { name: "ExpressJS", image: expressLogo },
@@ -33,7 +43,7 @@ const Page3 = () => {
     ];
 
     return (
-        <div className="absolute h-full w-full flex flex-col justify-center items-center px-3 bg-gradient-to-r from-gray-100 from-80% to-gray-300 page-back">
+        <div className={`absolute h-full w-full flex flex-col justify-center items-center px-3 bg-gradient-to-r from-gray-100 from-80% to-gray-300 ${paper}`}>
             <h3 className="mb-8 text-4xl font-semibold">
                 My <span className="text-cyan-600">Skills</span>
             </h3>
@@ -45,10 +55,15 @@ const Page3 = () => {
                     </div>
                 ))}
             </div>
-            <button className="absolute left-2 text-gray-400 hover:cursor-pointer bottom-3" onClick={() => { dispatch(backPage(0)) }}>
+            <button className="absolute left-2 text-gray-400 hover:cursor-pointer bottom-3" onClick={() => { dispatch(backPage(2)) }}>
                 <FaAngleLeft />
             </button>
-            <div className="text-gray-400 absolute bottom-3">2</div>
+            <button className="md:hidden absolute text-gray-400 right-2 hover:cursor-pointer bottom-3"
+                onClick={() => { dispatch(nextPage(3)) }}
+            >
+                <FaAngleRight />
+            </button>
+            <div className="text-gray-400 absolute bottom-3">3</div>
         </div>
     )
 }

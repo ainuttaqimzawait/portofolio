@@ -1,13 +1,11 @@
-import { FaAngleRight, FaWhatsapp } from "react-icons/fa";
-// import Whatsapp from "./contact";
+import { FaAngleLeft, FaAngleRight, FaWhatsapp } from "react-icons/fa";
 import { useDispatch } from "react-redux";
-import { nextPage } from "../../../App/feature/pagination/action";
+import { backPage, nextPage } from "../../../App/feature/pagination/action";
 
 const Page2 = ({ sendDataToParent }) => {
     const dispatch = useDispatch();
     return (
         <div className="absolute h-full w-full flex flex-col justify-center items-center px-4 bg-gradient-to-r from-gray-100 from-80% to-gray-300 page-front">
-            {/* <Whatsapp /> */}
             <h3 className="text-4xl font-semibold">
                 About <span className="text-cyan-600">Me</span>
             </h3>
@@ -20,12 +18,15 @@ const Page2 = ({ sendDataToParent }) => {
                     Download CV
                 </button>
             </a>
+            <button className="md:hidden absolute left-2 text-gray-400 hover:cursor-pointer bottom-3" onClick={() => { dispatch(backPage(1)) }}>
+                <FaAngleLeft />
+            </button>
             <button className="absolute text-gray-400 right-2 hover:cursor-pointer bottom-3"
-                onClick={() => { dispatch(nextPage(0)) }}
+                onClick={() => { dispatch(nextPage(2)) }}
             >
                 <FaAngleRight />
             </button>
-            <div className="text-gray-400 absolute bottom-3">1</div>
+            <div className="text-gray-400 absolute bottom-3">2</div>
         </div>
     )
 }

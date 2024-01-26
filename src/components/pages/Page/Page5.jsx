@@ -1,11 +1,21 @@
 import project3 from "../../../assets/images/berita.png";
-import { FaAngleLeft, FaReact } from "react-icons/fa";
+import { FaAngleLeft, FaAngleRight, FaReact } from "react-icons/fa";
 import { SiBootstrap } from "react-icons/si";
-import { backPage } from "../../../App/feature/pagination/action";
+import { backPage, nextPage } from "../../../App/feature/pagination/action";
 import { useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
 
 const Page5 = () => {
     const dispatch = useDispatch();
+    const [paper, setPaper] = useState("");
+    useEffect(() => {
+        const mediaQuery = window.matchMedia("(max-width: 767px)");
+        if (mediaQuery.matches) {
+            setPaper("page-front")
+        } else {
+            setPaper("page-back")
+        }
+    })
     const projects = [
         {
             img: project3,
@@ -20,7 +30,7 @@ const Page5 = () => {
     ];
 
     return (
-        <div className="absolute left-0 h-full w-full flex flex-col justify-center items-center px-3 bg-gradient-to-r from-gray-100 from-80% to-gray-300 page-back">
+        <div className={`absolute left-0 h-full w-full flex flex-col justify-center items-center px-3 bg-gradient-to-r from-gray-100 from-80% to-gray-300 ${paper}`}>
             <div className="text-center mt-7">
                 <h3 className="text-4xl font-semibold">
                     News <span className="text-cyan-600">App</span>
@@ -60,10 +70,15 @@ const Page5 = () => {
                     ))}
                 </div>
             </div>
-            <button className="absolute left-2 text-gray-400 hover:cursor-pointer bottom-3" onClick={() => { dispatch(backPage(1)) }}>
+            <button className="absolute left-2 text-gray-400 hover:cursor-pointer bottom-3" onClick={() => { dispatch(backPage(4)) }}>
                 <FaAngleLeft />
             </button>
-            <div className="text-gray-400 absolute bottom-3">4</div>
+            <button className="md:hidden absolute text-gray-400 right-2 hover:cursor-pointer bottom-3"
+                onClick={() => { dispatch(nextPage(5)) }}
+            >
+                <FaAngleRight />
+            </button>
+            <div className="text-gray-400 absolute bottom-3">5</div>
         </div>
     )
 }

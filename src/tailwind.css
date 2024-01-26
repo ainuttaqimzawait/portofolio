@@ -28,28 +28,9 @@ body {
       transform: rotateY(-180deg);
     }
   }
-  
-  .animate-slide-left {
-    /* Atur transform awal (posisi awal sebelum animasi) */
-    transform: scale(0);
-    transform-origin: left;
-    /* transform: rotateY(180deg); */
-  
-    /* Animasi keyframes saat halaman web pertama kali dibuka */
-    animation: scaleIn 2s ease-in-out reverse;
-  }
-  .animate-slide-right {
-    /* transform: scale(0); */
-    transform-origin: left;
-    transform-style:preserve-3d;
-    /* transform: rotateY(-180deg); */
-  
-    /* animation: scaleIn 2s ease-in-out reverse; */
-  }
 
   .page-right {
     position: absolute;
-    width: 50%;
     right: 0;
     transform-origin: left;
     transform-style:preserve-3d;
@@ -60,7 +41,6 @@ body {
   }
   .page-back {
     transform: rotateY(180deg) translateZ(1px);
-    /* background-color: linier-gradient(90deg, #fff, #dcdcdc) */
   }
 
   .turn {
