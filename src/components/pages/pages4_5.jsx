@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 const Pages4_5 = () => {
     let { data } = useSelector(state => state.setStyle)
     return (
-        <div className={`h-full w-full md:w-1/2 page-right ${data[4]}`}>
+        <div className={`h-full w-1/2 page-right ${data[4]}`}>
             <Page4 />
             <Page5 />
         </div>
