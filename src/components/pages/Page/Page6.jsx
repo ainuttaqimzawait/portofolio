@@ -37,9 +37,9 @@ const Page6 = () => {
                         {contact_info.map((contact, i) => (
                             <a href={contact.link}
                                 key={i}
-                                className="flex flex-row text-left gap-4 flex-wrap items-center"
+                                className="flex flex-row text-left gap-3 flex-wrap items-center"
                             >
-                                <div className="min-w-[3.5rem]  text-3xl min-h-[3.5rem] flex items-center justify-center text-white bg-cyan-600 rounded-full">
+                                <div className="min-w-[2rem] text-sm md:text-xl min-h-[2rem] flex items-center justify-center text-white bg-cyan-600 rounded-full">
                                     {contact.logo}
                                 </div>
                                 <p className="md:text-base text-sm  break-words">

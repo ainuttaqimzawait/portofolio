@@ -25,7 +25,7 @@ const Page1 = () => {
     ];
 
     return (
-        <div className={`absolute h-box-h w-full outline-8 flex flex-col justify-center items-center px-3 bg-gradient-to-r from-gray-100 from-80% to-gray-300 rounded ${paper}`}>
+        <div className={`absolute h-full md:h-box-h w-full md:w-[452px] outline-8 flex flex-col justify-center items-center px-3 bg-gradient-to-r from-gray-100 from-80% to-gray-300 rounded ${paper}`}>
             <img src={Poto} alt="" className="w-1/2 mx-auto mb-4 rounded-full" />
             <h1 className="md:text-3xl text-2xl md:leading-normal leading-10 text-black font-bold mx-auto">
                 Ainuttaqim Zawait

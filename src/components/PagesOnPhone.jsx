@@ -18,8 +18,8 @@ const PagesOnPhone = () => {
         setTimeout(() => dispatch(nextPage(0)), 3000);
     }, [])
     return (
-        <div className="h-cov-h w-[448px] md:hidden relative" data-aos="flip-left">
-            <div className={`h-full w-full -top-1 page-right ${data[0]}`}>
+        <div className="h-[500px] w-[350px] md:hidden relative" data-aos="flip-left">
+            <div className={`h-[515px] w-full -top-1 page-right ${data[0]}`}>
                 <Cover />
                 <div className="h-full bg-cyan-600 page-back"></div>
             </div>

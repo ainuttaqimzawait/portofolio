@@ -47,7 +47,7 @@ const Page3 = () => {
             <h3 className="mb-8 text-4xl font-semibold">
                 My <span className="text-cyan-600">Skills</span>
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 m-6">
+            <div className="grid grid-cols-4 gap-3 m-6">
                 {skillsData.map((skill, index) => (
                     <div className="text-stone-800 p-2 rounded-lg shadow-md my-2 flex flex-col items-center">
                         <img src={skill.image} alt={`${skill.name} logo`} className="w-8 h-8" />

@@ -23,7 +23,7 @@ const Page4 = () => {
             </div>
             <div className="w-full px-6 mt-4">
                 <img src={project1} alt="" className="rounded-lg border border-gray-400" />
-                <img src={project1_a} alt="" className="absolute w-52 -mt-20 ml-44 rounded-sm border border-gray-400" />
+                <img src={project1_a} alt="" className="absolute w-[47%] -mt-20 ml-36 md:ml-44 rounded-sm border border-gray-400" />
                 <p className="text-sm text-left my-3 mt-5">
                     E-Commerce to display hijabs for sale
                 </p>
