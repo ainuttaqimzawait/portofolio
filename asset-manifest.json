@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/portofolio/static/css/main.5c0e960c.css",
+    "main.js": "/portofolio/static/js/main.1239e517.js",
+    "static/js/787.0163084b.chunk.js": "/portofolio/static/js/787.0163084b.chunk.js",
+    "static/media/berita.png": "/portofolio/static/media/berita.81171b91ac4fd765f20f.png",
+    "static/media/react.png": "/portofolio/static/media/react.2f2532db663fd5ec5f95.png",
+    "static/media/js.png": "/portofolio/static/media/js.e087754771abd3526937.png",
+    "static/media/tailwind.png": "/portofolio/static/media/tailwind.d5abcf62e57cbbee357e.png",
+    "static/media/Screenshot_39.jpg": "/portofolio/static/media/Screenshot_39.2d20a1487ea9f9f10568.jpg",
+    "static/media/photo.png": "/portofolio/static/media/photo.25fcdb4fb0de56626bd9.png",
+    "static/media/hijabshop.jpg": "/portofolio/static/media/hijabshop.5c1bffb90be832194174.jpg",
+    "static/media/walpaper.jpg": "/portofolio/static/media/walpaper.452b011b02988456b874.jpg",
+    "static/media/api.png": "/portofolio/static/media/api.10b38baa8f6c8d0e4722.png",
+    "static/media/node.png": "/portofolio/static/media/node.85fedea58efe86438f00.png",
+    "static/media/bootstrap.png": "/portofolio/static/media/bootstrap.9016c575b3cb32b2e85c.png",
+    "static/media/express.png": "/portofolio/static/media/express.39a0f4c3d981885c64f8.png",
+    "static/media/css.png": "/portofolio/static/media/css.57feb85c31eec0ff2e1a.png",
+    "static/media/html.png": "/portofolio/static/media/html.ff3cf75e3b7cbb4ea77c.png",
+    "static/media/mysql.png": "/portofolio/static/media/mysql.4676ad983d6bd3e9fac9.png",
+    "index.html": "/portofolio/index.html",
+    "main.5c0e960c.css.map": "/portofolio/static/css/main.5c0e960c.css.map",
+    "main.1239e517.js.map": "/portofolio/static/js/main.1239e517.js.map",
+    "787.0163084b.chunk.js.map": "/portofolio/static/js/787.0163084b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5c0e960c.css",
+    "static/js/main.1239e517.js"
+  ]
+}
