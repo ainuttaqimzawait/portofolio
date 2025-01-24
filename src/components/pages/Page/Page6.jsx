@@ -1,6 +1,6 @@
-import { FaAngleLeft, FaAngleRight, FaLocationArrow, FaWhatsapp } from "react-icons/fa";
+import { FaAngleLeft, FaAngleRight, FaHome, FaLocationArrow, FaWhatsapp } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
-import { backPage, nextPage } from "../../../App/feature/pagination/action";
+import { backHome, backPage, nextPage } from "../../../App/feature/pagination/action";
 import { useDispatch } from "react-redux";
 
 const Page6 = () => {
@@ -53,9 +53,12 @@ const Page6 = () => {
             <button className="md:hidden absolute left-2 text-gray-400 hover:cursor-pointer bottom-3" onClick={() => { dispatch(backPage(5)) }}>
                 <FaAngleLeft />
             </button>
-            <button className="absolute right-2 text-gray-400 hover:cursor-pointer bottom-3" onClick={() => { dispatch(nextPage(6)) }}>
-                <FaAngleRight />
+            <button className="absolute right-4 text-gray-400 hover:cursor-pointer bottom-3 text-2xl" onClick={() => { dispatch(backHome(0)) }}>
+                <FaHome />
             </button>
+            {/* <button className="absolute right-2 text-gray-400 hover:cursor-pointer bottom-3" onClick={() => { dispatch(nextPage(6)) }}>
+                <FaAngleRight />
+            </button> */}
             <div className="text-gray-400 absolute bottom-3">6</div>
         </div>
     )
